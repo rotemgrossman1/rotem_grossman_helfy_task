@@ -14,15 +14,16 @@ async function getAllTasks(){
 }
 
 async function createTask(body){
-    tasks.push({
+    const newTask = {
         id: tasks.length + 1,
         title: body.title,
         description: body.description,
         completed: false,
         createdAt: new Date(),
         priority: body.priority || 'medium'
-    });
-    return await Promise.resolve(tasks[tasks.length - 1]);
+    };
+    tasks.push(newTask);
+    return await Promise.resolve(newTask);
 }
 function findTaskById(id) {
     try{
@@ -60,4 +61,12 @@ async function toggleTaskCompletion(id){
     }else{
         return null;
     }
+}
+
+module.exports = {
+    getAllTasks,
+    createTask,
+    updateTask,
+    deleteTask,
+    toggleTaskCompletion
 }

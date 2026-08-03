@@ -56,3 +56,11 @@ async function toggleTaskCompletion(req, res) {
         res.status(500).json({ message: 'Error toggling task completion' });
     }
 }
+
+module.exports = {
+    getAllTasks,
+    createTask,
+    updateTask,
+    deleteTask,
+    toggleTaskCompletion
+};
