@@ -1,3 +1,4 @@
+
 const tasks = [
     {
         id: 1,
@@ -15,7 +16,7 @@ async function getAllTasks(){
 
 async function createTask(body){
     const newTask = {
-        id: tasks.length + 1,
+        id: crypto.randomUUID(),
         title: body.title,
         description: body.description,
         completed: false,
