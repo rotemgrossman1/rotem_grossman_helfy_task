@@ -1,0 +1,91 @@
+.task-list-page {
+  max-width: 950px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  padding: 1rem 0;
+  cursor: grab; /* PC Grab Pointer */
+  user-select: none;
+  -webkit-user-select: none;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-wrapper.active {
+  cursor: grabbing; /* PC Active Drag Pointer */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  width: max-content;
+}
+
+/* PC Navigation Arrow Buttons */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #334155;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn:hover {
+  background: #f8fafc;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.nav-btn.prev {
+  left: -20px;
+}
+
+.nav-btn.next {
+  right: -20px;
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.error-state {
+  color: #ef4444;
+}

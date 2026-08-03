@@ -1,5 +1,6 @@
 import React from 'react';
-import './TaskItem.css';
+import '../styles/TaskItem.css';
+
 export default function TaskItem({ task }) {
   return (
     <div className="task-item">
@@ -10,7 +11,7 @@ export default function TaskItem({ task }) {
         </span>
       </div>
       
-      <p>{task.description}</p>
+      <p className="task-desc">{task.description}</p>
       
       <div className="task-footer">
         <span>Status: {task.completed ? 'Completed' : 'Pending'}</span>
