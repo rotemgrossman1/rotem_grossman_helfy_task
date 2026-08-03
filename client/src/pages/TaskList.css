@@ -1,0 +1,30 @@
+.task-list-page {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.page-title {
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.task-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.loading-state,
+.error-state {
+  text-align: center;
+  padding: 3rem;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.error-state {
+  color: #ef4444;
+}

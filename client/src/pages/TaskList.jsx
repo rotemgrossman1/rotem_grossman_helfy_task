@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TaskItem from '../components/TaskItem';
-
+import './TaskList.css'
 const API_URL = 'http://localhost:4000/api/tasks';
 
 export default function TaskList() {

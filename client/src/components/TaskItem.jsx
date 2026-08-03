@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './TaskItem.css';
 export default function TaskItem({ task }) {
   return (
     <div className="task-item">
